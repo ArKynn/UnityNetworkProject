@@ -74,7 +74,9 @@ Este projeto ajudou bastante a experienciar a base o que é programar um jogo mu
   
 ## Instruções  
 
-## Bibliografia:  
+## Agradecimentos
+Agradeço ao professor Diogo Andrade, que me disponibilizou o projeto de sua autoria MPWyzards, que me ajudou a resolver problemas ao comparar a sua implementação do Network for GameObjects com a deste projeto.  
+## Bibliografia  
 https://www.youtube.com/watch?v=3yuBOB3VrCk  
 https://www.youtube.com/watch?v=swIM2z6Foxk  
 https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188  
