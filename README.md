@@ -17,7 +17,9 @@ Depois de ter uma base funcional, fui assistir ao seguinte video: https://www.yo
 Enquanto assitia, importei o Unity Netcode for GameObjects para o projeto, adicionei o Network Manager e o Unity Transport a um objeto separado, adicionei o component Network Object ao player e tornei-o um player prefab.  
 
 Iniciando o play mode do Unity Editor, e selecionando a opção "Start Host" do Network Manager, o personagem corretamente aparecia no mundo.  
-
+  
+![Screenshot_1](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/4b66d6c5-75ec-4828-b73d-85ccba8b11f9)  
+  
 Importei o Asset ParrelSync, para poder fazer testes dentro do editor. Abri uma instância como "Start Server" e outra como "Start Client". O personagem aparecia no mundo, eu conseguia-o mexer, mas o cliente e o servidor não estavam sincronizados.  
 
 Para resolver este problema, adicionei o behaviour "Network Transform" ao jogador, fiz com que o personagem apenas recebia inputs do cliente a que lhe corresponde e testei de novo.  
@@ -25,11 +27,15 @@ Para resolver este problema, adicionei o behaviour "Network Transform" ao jogado
 Desta vez, nem o cliente, nem o servidor registavam mudanças no personagem, ele apenas ficava parado. Após procurar uma solução, percebi que o behaviour Network Transform que adicionei ao jogador sincroniza o transform do player do servidor com os clientes e não ao contrário, ou seja, eu precisava de adicionar uma forma com que seja o servidor a mexer o personagem e não o cliente.  
 
 Pensando qual abordagem seria a melhor, optei por tornar o movimento do personagem autoritário do servidor. Troquei o metodo do movimento para usar o ServerRpc e testei.  
-
+  
+![Screenshot_3](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/275c004b-f826-4a1b-a7e0-a82e9904b050)  
+  
 O jogador já se mexia, mas quando tentava atacar, nada acontecia. O esperado seria o personagem parar momentáriamente, atacar e depois voltar a correr. Testei e tentei resolver este problema mas continuava ou a não atacar ou quando atacava no servidor, não o fazia no cliente.  
 
-Com estes problemas, decidi tornar o movimento e o ataque autoritário do cliente. Troquei para o Client Network Transform e testei.  
-
+Com estes problemas, decidi tornar o movimento e o ataque autoritário do cliente. Troquei para o Client Network Transform e testei. 
+  
+![Screenshot_2](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/30860145-5db0-41a6-9f32-35119ea4836d)  
+  
 Agora o cliente andava e atacava, mas o servidor só andava. Fui testando e pesquisando sobre o problema e verifiquei que o erro era a falta de um Network Animator.  
 
 Adicionei-o e testei. Igual, no servidor, o personagem continuava sem atacar. Fiz com que o metodo que aciona as animações do ataque fosse computado no servidor.  
