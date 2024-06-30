@@ -12,7 +12,7 @@ Utilizei o seguinte asset pack: https://assetstore.unity.com/packages/2d/charact
 Após criar o mundo de jogo, fiz o animator para o personagem e criei um script base para o Player, ainda sem contar com qualquer elemento relacionado ao Unity Netcode for GameObjects, para ter uma base por onde me guiar.  
 Este script já inclui a detecção de input, movimento do player, acionamento do animator, vida e morte do personagem, ataques, detecção de colisões no ataque e dano infligido a outro jogador.  
 
-Depois de ter uma base funcional, fui assistir ao seguinte video: https://www.youtube.com/watch?v=swIM2z6Foxk, para me informar sobre o Unity Netcode for GameObjects.  
+Depois de ter uma base funcional, fui assistindo ao seguinte video: https://www.youtube.com/watch?v=swIM2z6Foxk, para me informar sobre o Unity Netcode for GameObjects e abri o projeto MPWyzards para a ajuda na resolução de problemas.  
 
 Enquanto assitia, importei o Unity Netcode for GameObjects para o projeto, adicionei o Network Manager e o Unity Transport a um objeto separado, adicionei o component Network Object ao player e tornei-o um player prefab.  
 
@@ -48,7 +48,25 @@ Desta vez, a animação funcionava bem dos dois lados, e eu continuava a consegu
 
 Com as animações funcionais, adicionei um personagem imóvel ao projeto para testar a deteção de colisões.  
 
-Sem mudar nada, o personagem imóvel não respondia aos ataques.
+Sem mudar nada, o personagem imóvel não respondia aos ataques. Ao procurar o problema, percebi que o jogador colidia com o personagem imovel, mas a informação de que foi atacado só acontecia no cliente.  
+
+Troquei a forma como informava da colisão para ser pelo servidor, através do uso de Server Rpc e testei.  
+  
+![Screenshot_4](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/d35271c6-edc9-4906-beca-34afa7961feb)  
+
+A transmição do dano causado não estava a acontecer e resolvi, informando o servidor do dano causado e o servidor atualizado a vida do jogador, que tornei uma Network Variable, para ser automáticamente sincronizada.  
+  
+![Screenshot_5](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/cf1d0ed9-72ac-4861-9965-01600c483946)  
+  
+O dano agora era corretamente tensmitido, mas não a sua quantidade. Quando testei com realmente dois cliente, em vez de um personagem imóvel, o jogador atacado registava que recebeu dano mas a vida não descia.  
+  
+Após a correção de uns erros na transmição do valor do dano enviado, agora os personagens, recebiam dano e morriam corretamente.  
+  
+![image](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/741c1713-4ed8-4b73-9253-f60e55718384)  
+
+## Conclusões  
+
+Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás
 
 ## Bibliografia:  
 https://www.youtube.com/watch?v=3yuBOB3VrCk  
