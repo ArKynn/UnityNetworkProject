@@ -12,7 +12,7 @@ public class Player : NetworkBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private int maxHealth;
     [SerializeField] private float attackChainResetTime;
-    [SerializeField] private int attackDamage = 2;
+    [SerializeField] private int attackDamage;
     [SerializeField] private GameObject corpseGameObject;
     [SerializeField] private GameObject HpBarPrefab;
 
@@ -22,11 +22,8 @@ public class Player : NetworkBehaviour
         get => _health.Value;
         private set
         {
-            print(_health.Value - value);
-            _health.Value += value;
-            print(_health.Value - value);
-            
-            _hpBar.fillAmount = _health.Value / maxHealth;
+            _health.Value = value;
+            _hpBar.fillAmount = (float) _health.Value / maxHealth;
             if (_health.Value <= 0) StartDeathClientRpc();
         } 
     }
@@ -201,7 +198,7 @@ public class Player : NetworkBehaviour
     [ServerRpc(RequireOwnership =  false)]
     private void DamageServerRpc(int amount)
     {
-        Health = Health - amount;
+        Health += amount;
         if (Health > 0) _animator.SetTrigger(Hurt);
     }
 
@@ -223,12 +220,14 @@ public class Player : NetworkBehaviour
     private void StartRespawnServerRpc()
     {
         RespawnPlayer();
+        _collider.enabled = true;
+        Health = maxHealth;
     }
 
     private void RespawnPlayer()
     {
         _animator.SetTrigger(Respawn);
-        transform.position = Vector3.zero + (Vector3)(2 * UnityEngine.Random.insideUnitCircle);
+        transform.position = Vector3.zero + (Vector3)(3.5f * UnityEngine.Random.insideUnitCircle);
     }
 
     public override void OnDestroy()

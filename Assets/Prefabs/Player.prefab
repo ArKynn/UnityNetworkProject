@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2989990400
+  GlobalObjectIdHash: 719639590
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -313,12 +313,8 @@ MonoBehaviour:
   moveSpeed: 3
   maxHealth: 5
   attackChainResetTime: 2
-  attacksDamage:
-  - m_InternalValue: 1
-  - m_InternalValue: 1
-  - m_InternalValue: 3
+  attackDamage: -2
   corpseGameObject: {fileID: 2902177539699555860, guid: 1f0e39e1f891d70489f6afd1827eff20, type: 3}
-  attackHitbox: {fileID: 5965723251477207839}
   HpBarPrefab: {fileID: 6252142459373745007, guid: 25ae552103aaa0642906fd9f8451f33d, type: 3}
 --- !u!114 &5240477772065358669
 MonoBehaviour:
