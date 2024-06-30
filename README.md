@@ -73,7 +73,8 @@ Após a correção de uns erros na transmição do valor do dano enviado, agora 
 Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás.  
   
 ## Instruções  
-
+Para abrir um cliente, correr o ficheiro LaunchClient.cmd, para abrir um servidor, correr o ficheiro LaunchServer.cmd.
+O jogo não corre se não ouver um servidor e pelo menos um cliente. Link para a Build: https://drive.google.com/drive/folders/1bmHgxUzUesmMJ3D0s0eRibWaCpKqOBqe?usp=sharing
 ## Agradecimentos
 Agradeço ao professor Diogo Andrade, que me disponibilizou o projeto de sua autoria MPWyzard, que me ajudou a resolver problemas ao comparar a sua implementação do Network for GameObjects com a deste projeto.  
 ## Bibliografia  
