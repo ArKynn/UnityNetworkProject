@@ -3,6 +3,10 @@
 - David Mendes 22203255
 ## Link para o repositório:  
 https://github.com/ArKynn/UnityNetworkProject  
+## Diagrama Arquitetura Redes  
+  
+![DiagramaRedes(1)](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/173c7d1a-d2ff-4b0e-b382-2851b5a12be3)  
+  
 ## Relatório: 
 
 Comecei este projeto logo a criar a base do projeto no Unity. Eu já sabia ao inicio que queria fazer um jogo de ação no Unity sem login/matchmaking, que foi o que eu fiz para este projeto. A minha ideia a vir para este projeto seria um jogo 2D PvP DeathMatch com melee combat.  
@@ -66,9 +70,14 @@ Após a correção de uns erros na transmição do valor do dano enviado, agora 
 
 ## Conclusões  
 
-Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás
-
-## Bibliografia:  
+Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás.  
+  
+## Instruções  
+Para abrir um cliente, correr o ficheiro LaunchClient.cmd, para abrir um servidor, correr o ficheiro LaunchServer.cmd.
+O jogo não corre se não ouver um servidor e pelo menos um cliente. Link para a Build: https://drive.google.com/drive/folders/1bmHgxUzUesmMJ3D0s0eRibWaCpKqOBqe?usp=sharing
+## Agradecimentos
+Agradeço ao professor Diogo Andrade, que me disponibilizou o projeto de sua autoria MPWyzard, que me ajudou a resolver problemas ao comparar a sua implementação do Network for GameObjects com a deste projeto.  
+## Bibliografia  
 https://www.youtube.com/watch?v=3yuBOB3VrCk  
 https://www.youtube.com/watch?v=swIM2z6Foxk  
 https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188  
