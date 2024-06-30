@@ -34,7 +34,15 @@ Agora o cliente andava e atacava, mas o servidor só andava. Fui testando e pesq
 
 Adicionei-o e testei. Igual, no servidor, o personagem continuava sem atacar. Fiz com que o metodo que aciona as animações do ataque fosse computado no servidor.  
 
-Desta vez, os dois atacavam, mas a animação parecia repetir o inicio várias vezes. Fui investigar e reparei que a variavel que controla quando o jogador pode atacar era gerida no metodo dos ataques, ou seja, enquanto tinha o botão do ataque premido, o personagem iria começar um ataque repetidamente.
+Desta vez, os dois atacavam, mas a animação parecia repetir o inicio várias vezes. Fui investigar e reparei que a variavel que controla quando o jogador pode atacar era gerida no metodo dos ataques, ou seja, enquanto tinha o botão do ataque premido, o personagem iria começar um ataque repetidamente.  
+
+Fui testando e iterando até perceber que existe uma variante do Network Animator chamado Client Network Animator. Com os problemas que estava a ter e com os possiveis problemas que eu pensei que iria ter com a deteção de colisões, decidi tornar as animações autoritárias do cliente e adicionei esse behaviour.  
+
+Desta vez, a animação funcionava bem dos dois lados, e eu continuava a conseguir controlar quando o personagem pode ou não atacar. 
+
+Com as animações funcionais, adicionei um personagem imóvel ao projeto para testar a deteção de colisões.  
+
+Sem mudar nada, o personagem imóvel não respondia aos ataques.
 
 ## Bibliografia:  
 https://www.youtube.com/watch?v=3yuBOB3VrCk  
