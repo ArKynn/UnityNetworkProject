@@ -3,6 +3,10 @@
 - David Mendes 22203255
 ## Link para o repositório:  
 https://github.com/ArKynn/UnityNetworkProject  
+## Diagrama Arquitetura Redes  
+  
+![DiagramaRedes(1)](https://github.com/ArKynn/UnityNetworkProject/assets/115217596/173c7d1a-d2ff-4b0e-b382-2851b5a12be3)  
+  
 ## Relatório: 
 
 Comecei este projeto logo a criar a base do projeto no Unity. Eu já sabia ao inicio que queria fazer um jogo de ação no Unity sem login/matchmaking, que foi o que eu fiz para este projeto. A minha ideia a vir para este projeto seria um jogo 2D PvP DeathMatch com melee combat.  
@@ -66,7 +70,9 @@ Após a correção de uns erros na transmição do valor do dano enviado, agora 
 
 ## Conclusões  
 
-Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás
+Este projeto ajudou bastante a experienciar a base o que é programar um jogo multiplayer, visto que tive de lidar com diversos problemas relacionados com a comunicação entre o cliente e o servidor. Apesar disso, não foi algo que me diretamente ensinou mais sobre tudo o que está por detrás do Unity Netcode for GameObjects e do Unity transport, nem sobre redes e conecção via internet. Ainda assim, acho que foi uma experiencia positiva pois deixou-me mergulhar os pés no vasto oceano que é a internet e os vários sistemas, protocolos e convenções por detrás.  
+  
+## Instruções  
 
 ## Bibliografia:  
 https://www.youtube.com/watch?v=3yuBOB3VrCk  
